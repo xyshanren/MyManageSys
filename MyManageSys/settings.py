@@ -31,6 +31,8 @@ ALLOWED_HOSTS = ['127.0.0.1']
 
 # Application definition
 
+# 将apps的添加至python项目的搜索目录
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 # 将extra_apps的添加至python项目的搜索目录
 sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 
@@ -41,6 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #注册app
+    'students',
     # 第三方管理后台
     'xadmin',
     # 相关依赖
